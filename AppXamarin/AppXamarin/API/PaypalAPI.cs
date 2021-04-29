@@ -1,6 +1,7 @@
 ﻿using AppXamarin.API.Interfaces;
 using AppXamarin.API.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 using RestSharp.Authenticators;
 using System;
@@ -13,6 +14,9 @@ namespace AppXamarin.API
     {
         public void SendPay(double valAmount)
         {
+            string messageError = string.Empty;
+            string nameError = string.Empty;
+
             RequestPayModel requestPay = null;
 
             string linkPay = "https://api-m.sandbox.paypal.com/v1/payments/payouts";
@@ -50,35 +54,46 @@ namespace AppXamarin.API
             request.AddJsonBody(requestPay);
 
             IRestResponse response = client.Post(request);
+
+            var jObject = JObject.Parse(response.Content);
+
+            if (jObject.ContainsKey("message"))
+            {
+                messageError = jObject.GetValue("message").ToString();
+                nameError = jObject.GetValue("name").ToString();
+
+                if (nameError.Contains("USER_BUSINESS_ERROR"))
+                    throw new Exception("Something did not go very well. Try again later");
+                else
+                    throw new Exception(messageError);
+            }
         }
 
         public ServiceTokenModel GetToken()
         {
             ServiceTokenModel serviceToken = new ServiceTokenModel();
-            try
+            string linkGetToken = "https://api-m.sandbox.paypal.com/v1/oauth2/token";
+            string clientID = "AYwqcEZUQTD1V7zcqg3wr57TOhADFqeReR-l-Ax3UTZA2j3fNCLprhyjP14XiLVimaZtGx5oDaZrhvbP";
+            string secret = "ECXBAPj_hKreSGLKIk6BFEhZKzWY3P5ZHjbdS33dwNllHDlfCr7Qot0CFlk2W5vLRWWror1Y6-R7DqCi";
+
+            var client = new RestClient(linkGetToken);
+            client.Authenticator = new HttpBasicAuthenticator(clientID, secret);
+
+            var request = new RestRequest();
+            request.AddHeader("content-type", "application/x-www-form-urlencoded");
+            request.AddParameter("grant_type", "client_credentials");
+
+            IRestResponse response = client.Post(request);
+
+            var jObject = JObject.Parse(response.Content);
+
+            if (jObject.ContainsKey("access_token"))
             {
-                string linkGetToken = "https://api-m.sandbox.paypal.com/v1/oauth2/token";
-                string clientID = "AYwqcEZUQTD1V7zcqg3wr57TOhADFqeReR-l-Ax3UTZA2j3fNCLprhyjP14XiLVimaZtGx5oDaZrhvbP";
-                string secret = "ECXBAPj_hKreSGLKIk6BFEhZKzWY3P5ZHjbdS33dwNllHDlfCr7Qot0CFlk2W5vLRWWror1Y6-R7DqCi";
-
-                var client = new RestClient(linkGetToken);
-                client.Authenticator = new HttpBasicAuthenticator(clientID, secret);
-
-                var request = new RestRequest();
-                request.AddHeader("content-type", "application/x-www-form-urlencoded");
-                request.AddParameter("grant_type", "client_credentials");
-
-                IRestResponse response = client.Post(request);
-
-
-                //serviceToken = JsonConvert.DeserializeObject<ServiceTokenModel>(response.Content);
-
+                serviceToken.access_token = jObject.GetValue("access_token").ToString();
             }
-            catch (Exception ex)
-            {
 
-            }
-            serviceToken.access_token = "A21AAJz3ArPq4GzjHMrv40XM3es6upLCXelF8JgKm5j9BKYKvzRV1-br41ngyaZUQDHErmOhbmokyHEIM8JvPHVi8Si2heqrQ";
+            if (string.IsNullOrEmpty(serviceToken.access_token))
+                throw new Exception("Could not perform authentication. Try again.");
 
             return serviceToken;
         }

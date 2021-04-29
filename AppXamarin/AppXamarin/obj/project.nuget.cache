@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+vHHvL8hMi8AyNbjYNbivYqnJmV2z/wj4y1J7yc8/UppCN1gOACsq89WXgt4vMfqxIz35NAr8pZNgmdW4DU9rw==",
+  "dgSpecHash": "dJRy0NSdh3aVOu11UFftj02kfr2ovjBYaXmLU1LDd3Yo2g52GoTkbWHDHeMzieF6KPOE1m5H3sFODKlTg/ATwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj",
+  "projectFilePath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arval\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\arval\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

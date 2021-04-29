@@ -1110,11 +1110,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin.iOS\\AppXamarin.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin.iOS\\AppXamarin.iOS.csproj",
       "projectName": "AppXamarin.iOS",
-      "projectPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin.iOS\\AppXamarin.iOS.csproj",
+      "projectPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin.iOS\\AppXamarin.iOS.csproj",
       "packagesPath": "C:\\Users\\arval\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin.iOS\\obj\\",
+      "outputPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1135,8 +1135,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj": {
-              "projectPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj"
+            "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj": {
+              "projectPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj"
             }
           }
         }

@@ -19,8 +19,17 @@ namespace AppXamarin
         private void Button_Clicked(object sender, EventArgs e)
         {
             PaypalAPI paypal = new PaypalAPI();
-            paypal.SendPay(Convert.ToDouble(valuePay.Text));
-            DisplayAlert("Atenção", "Executando pagamento" + valuePay.Text, "Ok");
+            try
+            {
+                paypal.SendPay(Convert.ToDouble(valuePay.Text));
+                DisplayAlert("Success", "Successful Payment.", "Ok");
+            } 
+            catch(Exception er)
+            {
+                DisplayAlert("Error", er.Message, "Ok");
+            }
+            valuePay.Text = "";
+            valuePay.Focus();
         }
     }
 }

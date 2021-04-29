@@ -2002,11 +2002,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin.Android\\AppXamarin.Android.csproj",
+      "projectUniqueName": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin.Android\\AppXamarin.Android.csproj",
       "projectName": "AppXamarin.Android",
-      "projectPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin.Android\\AppXamarin.Android.csproj",
+      "projectPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin.Android\\AppXamarin.Android.csproj",
       "packagesPath": "C:\\Users\\arval\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin.Android\\obj\\",
+      "outputPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2027,8 +2027,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj": {
-              "projectPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj"
+            "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj": {
+              "projectPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj"
             }
           }
         }

@@ -8,7 +8,7 @@
             <Label Text="Hello! Make your Payment using paypal." HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Value" FontSize="Title" Padding="30,10,0,10"/>
-        <Entry Margin="30,0,30,10" x:Name="valuePay" Placeholder="12.90" />
+        <Entry Margin="30,0,30,10" x:Name="valuePay" Placeholder="12.90" Keyboard="Numeric" />
         <Button Text="Pay Now" Background="#2196F3" TextColor="White" VerticalOptions="EndAndExpand" Clicked="Button_Clicked" />
     </StackLayout>
 

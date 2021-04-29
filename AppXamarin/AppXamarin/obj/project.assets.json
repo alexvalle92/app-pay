@@ -700,11 +700,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj",
+      "projectUniqueName": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj",
       "projectName": "AppXamarin",
-      "projectPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj",
+      "projectPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\AppXamarin.csproj",
       "packagesPath": "C:\\Users\\arval\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arval\\Source\\Repos\\app-pay\\AppXamarin\\AppXamarin\\obj\\",
+      "outputPath": "C:\\Users\\arval\\source\\repos\\app-pay\\AppXamarin\\AppXamarin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
