@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.companyname.appxamarin"
-	.size	.L.env.str.1, 27
+	.asciz	"com.test.paymentpaypalsdk"
+	.size	.L.env.str.1, 26
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -33,7 +33,7 @@ application_config:
 	/* uses_mono_llvm */
 	.byte	0
 	/* uses_mono_aot */
-	.byte	0
+	.byte	1
 	/* uses_assembly_preload */
 	.byte	1
 	/* is_a_bundled_app */
@@ -58,8 +58,8 @@ application_config:
 	.section	.rodata.env.str.2,"aMS",%progbits,1
 	.type	.L.env.str.2, %object
 .L.env.str.2:
-	.asciz	"none"
-	.size	.L.env.str.2, 5
+	.asciz	"normal"
+	.size	.L.env.str.2, 7
 	.section	.data.mono_aot_mode_name,"aw",%progbits
 	.global	mono_aot_mode_name
 mono_aot_mode_name:
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"c3b8016f-43cb-4612-9888-c220d75ffaed"
+	.asciz	"5d4e23ad-5495-4736-94d6-37ab3a967da8"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

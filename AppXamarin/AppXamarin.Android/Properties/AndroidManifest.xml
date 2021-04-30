@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.2" package="com.test.paymentpaypalsdk" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="27" android:targetSdkVersion="28" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="3" android:versionName="1.3" package="com.test.paymentpaypalsdk" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="28" />
 	<application android:label="Payment Paypal SDK" android:theme="@style/MainTheme" android:icon="@mipmap/icon"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
